@@ -1,0 +1,142 @@
+/******************
+*
+Segundo Nav-menu
+*
+*******************/
+.menu-belowheader {
+    background-color: map-get($colors, pacific);
+    //top: 66px;
+    //margin-bottom: 75px;
+    .dropdown {
+        align-self: center;
+        padding: 5px;
+        a {
+            color: #fff !important;
+            &.dropdown-toggle {
+                &::after {
+                    display: none;
+                }
+            }
+        }   
+    }
+    .dropdown-menu-right {
+        background-color: #009b9b;
+        height: 51px;
+        .open{
+            a{
+                &:hover, &:active, &:focus, &:visited{
+                    background-color: #009b9b !important;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        background-color: #009b9b !important;
+        right: 0;
+        left: auto;
+        .icones-dropdown {
+            float: left;
+            padding-top: 3px;
+        }
+        li {
+            padding: 0;
+            a {
+                background-color: #009b9b;
+                padding: 10px 10px;
+                text-align: right;
+                width: 100%;
+                &:last-child {
+                    border-bottom: 1px solid map-get($colors, pacific);
+                }
+                &:hover, &:focus {
+                    background-color: #009b9b !important;
+                    width: 100%;
+                    text-align: right;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+            &.menu-item{
+                a{
+                    &:hover{
+                        background-color: #003C46 !important;
+                        -webkit-transition: all 0.5s ease;
+                        -moz-transition: all 0.5s ease;
+                        -ms-transition: all 0.5s ease;
+                        -o-transition: all 0.5s ease;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Função para definir a cor do placeholder
+@mixin form-placeholder() {
+    color: #fff;
+    font-weight: normal;
+}
+.form-search-rhs {
+    input {
+        color: #fff !important;
+        background-color: #009b9b !important;
+        border: none;
+        height: 3.5em;
+        border-radius: 0;
+        font-style: italic;
+        &::-webkit-input-placeholder {
+            @include form-placeholder;
+        }
+        &:-moz-placeholder {
+            @include form-placeholder;
+        }
+        &::-moz-placeholder {
+            @include form-placeholder;
+        }
+        &:-ms-input-placeholder {
+            @include form-placeholder;
+        }
+    }
+    button {
+        background-color: #009b9b;
+        border: none;
+        height: 51px;
+        border-radius: 0;
+        &:hover {
+            background-color: #009b9b;
+        }
+    }
+}
+#formSearchCollections {
+    input[type=text] {
+        font-size: 17px;
+        padding-left: 18px;
+        width: 31.4em;
+        height: 51px;
+        @media only screen and (max-width: 768px) {
+            width: 19.4em;
+        }
+    }
+    .input-group .form-control:focus {
+        z-index: 0;
+    }
+    span {
+        .mdi {
+            color: #fff;
+            font-size: 19px;
+        }
+    }
+    .adv_search{
+        float: left;
+        margin: auto 5px;
+        padding: 14% 0;
+    }
+}
+.tainacan-form-dropdown {
+    a {
+        i {
+            color: #fff !important;
+        }
+    }
+}

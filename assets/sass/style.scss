@@ -1,0 +1,80 @@
+$colors : (
+    cyprus: #003C46,
+    cyprus_footer: #00343d,
+    pacific: #00B4B4,
+    porcelain: #F2F4F5
+);
+
+nav {
+    &.navbar.menu-shadow {
+        background-color: #003C46 !important;
+    }
+    .tainacan-search-form {
+        color: #fff !important;
+        .input-group {
+            background-color: #003C46 !important;
+            .form-control-feedback {
+                color: #fff !important;
+            }
+        }
+        .form-control {
+            color: #fff !important;
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #fff;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                color: #fff;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                color: #fff;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                color: #fff;
+            }
+        }
+    }
+    &.menu-belowheader {
+        background-color: #00b4b4 !important;
+        height: auto;
+        padding: 0;
+        #menubelowHeader {
+            > ul {
+                > li {
+                    &.menu-item {
+                        a {
+                            color: #fff;
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                &.navbar-nav {
+                    li {
+                        a {
+                            color: #fff;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                &.dropdown-menu {
+                    background-color: #003C46;
+                    &:hover {
+                        background-color: #00B4B4;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        &:hover {
+            background-color: #00B4B4;
+        }
+    }
+}
+
+@import "menu";
