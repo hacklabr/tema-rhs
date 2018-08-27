@@ -1,5 +1,17 @@
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
 nav.navbar.menu-shadow {
-  background-color: #003C46 !important; }
+  background-color: #003C46 !important;
+  max-height: 66px; }
+  nav.navbar.menu-shadow .logo {
+    margin-left: 8px; }
 nav .tainacan-search-form {
   color: #fff !important; }
   nav .tainacan-search-form .input-group {

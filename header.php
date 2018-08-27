@@ -12,10 +12,20 @@
 </head>
 <body <?php body_class(); ?>>
         
-    <nav class="navbar navbar-expand-md navbar-light bg-white menu-shadow px-0">
-        <div class="container-fluid max-large px-0 margin-one-column" id="topNavbar">
+    <nav class="navbar navbar-expand-md navbar-light bg-white menu-shadow">
+        <div class="container mx-auto px-0" id="topNavbar">
             <?php echo tainacan_get_logo(); ?>
             <div class="btn-group ml-auto"> 
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Faça seu login
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                </div>
                     <form class="form-horizontal my-2 my-md-0 tainacan-search-form d-none" [formGroup]="searchForm" role="form" (keyup.enter)="onSubmit()">
                         <div class="input-group">
                             <input type="text" name="s" placeholder="<?php _e('Search', 'tainacan-theme'); ?>" class="form-control" formControlName="searchText" size="50">
@@ -33,16 +43,6 @@
                             </form>
                         </div>
                     </div>
-                <!-- <button type="button" class="btn btn-link text-heavy-metal dropdown-toggle dropdown-toggle-split px-1 d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="mdi mdi-account-outline"></i><div class="d-none d-md-inline-flex px-1">User</div><span class="sr-only text-jelly-bean">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu tainacan-dropdown-menu">
-                    <a class="dropdown-item" href="#">Perfil</a>
-                    <a class="dropdown-item" href="#">Coleção</a>
-                    <a class="dropdown-item" href="#">Sair</a>
-                </div>
-                <button type="button" class="btn btn-link text-heavy-metal px-1"><i class="mdi mdi-bell-outline"></i></button>
-                <button type="button" class="btn btn-link text-heavy-metal pl-1 pr-0"><i class="mdi mdi-help-circle-outline"></i></button> -->
             </div>
         </div>
     </nav>
