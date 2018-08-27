@@ -7,12 +7,12 @@ $colors : (
 
 nav {
     &.navbar.menu-shadow {
-        background-color: #003C46 !important;
+        background-color: map-get($colors, cyprus) !important;
     }
     .tainacan-search-form {
         color: #fff !important;
         .input-group {
-            background-color: #003C46 !important;
+            background-color: map-get($colors, cyprus) !important;
             .form-control-feedback {
                 color: #fff !important;
             }
@@ -34,7 +34,7 @@ nav {
         }
     }
     &.menu-belowheader {
-        background-color: #00b4b4 !important;
+        background-color: map-get($colors, pacific) !important;
         height: auto;
         padding: 0;
         #menubelowHeader {
@@ -62,9 +62,9 @@ nav {
                     }
                 }
                 &.dropdown-menu {
-                    background-color: #003C46;
+                    background-color: map-get($colors, cyprus);
                     &:hover {
-                        background-color: #00B4B4;
+                        background-color: map-get($colors, pacific);
                     }
                 }
             }
@@ -72,9 +72,22 @@ nav {
     }
     .dropdown-menu {
         &:hover {
-            background-color: #00B4B4;
+            background-color: map-get($colors, pacific);
         }
     }
 }
 
 @import "menu";
+
+.page-header {
+    > div{
+        &.t-bg-collection{
+            background-color: map-get($colors, cyprus);
+        }
+    }
+}
+footer {
+    &.tainacan-footer {
+        background-color: map-get($colors, cyprus_footer);
+    }
+}

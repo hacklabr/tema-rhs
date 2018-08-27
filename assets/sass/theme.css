@@ -21,7 +21,7 @@ nav .tainacan-search-form {
       /* Firefox 18- */
       color: #fff; }
 nav.menu-belowheader {
-  background-color: #00b4b4 !important;
+  background-color: #00B4B4 !important;
   height: auto;
   padding: 0; }
   nav.menu-belowheader #menubelowHeader > ul > li.menu-item a {
@@ -61,8 +61,7 @@ Segundo Nav-menu
   .menu-belowheader .dropdown-menu {
     background-color: #009b9b !important;
     right: 0;
-    left: auto;
-    padding: 0 !important; }
+    left: auto; }
     .menu-belowheader .dropdown-menu .icones-dropdown {
       float: left;
       padding-top: 3px; }
@@ -136,5 +135,11 @@ Segundo Nav-menu
 
 .tainacan-form-dropdown a i {
   color: #fff !important; }
+
+.page-header > div.t-bg-collection {
+  background-color: #003C46; }
+
+footer.tainacan-footer {
+  background-color: #00343d; }
 
 /*# sourceMappingURL=theme.css.map */
