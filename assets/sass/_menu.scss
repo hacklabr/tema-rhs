@@ -140,3 +140,53 @@ Segundo Nav-menu
         }
     }
 }
+
+
+#topNavbar {
+    .btn-transparent {
+        background: none;
+        color: #00b4b4;
+        margin-right: 6px;
+        padding-right: 13px;
+        &:hover {
+            color: #fff;
+        }
+        &[aria-expanded="true"] {
+            color: #fff;
+            background: #00b4b4;
+            border-radius: 0;
+            padding: 13px;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        & ~ .dropdown-menu {
+            background-color: #009b9b;
+            margin-top: -1px;
+            &:hover {
+                background: #009b9b;
+            }
+            a {
+                &:hover {
+                    background-color: #003C46 !important;
+                    -webkit-transition: all 0.5s ease;
+                    -moz-transition: all 0.5s ease;
+                    -ms-transition: all 0.5s ease;
+                    -o-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+    .navbar-text {
+        color: #fff;
+        align-self: center; 
+    }
+    .cadastre-se {
+        color: #00b4b4;
+        align-self: center;
+        &:hover {
+            color: #fff;
+        }
+    }
+}

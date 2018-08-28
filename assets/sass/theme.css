@@ -12,6 +12,8 @@ nav.navbar.menu-shadow {
   max-height: 66px; }
   nav.navbar.menu-shadow .logo {
     margin-left: 8px; }
+  nav.navbar.menu-shadow .b-bottom-top {
+    border: none; }
 nav .tainacan-search-form {
   color: #fff !important; }
   nav .tainacan-search-form .input-group {
@@ -147,6 +149,41 @@ Segundo Nav-menu
 
 .tainacan-form-dropdown a i {
   color: #fff !important; }
+
+#topNavbar .btn-transparent {
+  background: none;
+  color: #00b4b4;
+  margin-right: 6px;
+  padding-right: 13px; }
+  #topNavbar .btn-transparent:hover {
+    color: #fff; }
+  #topNavbar .btn-transparent[aria-expanded="true"] {
+    color: #fff;
+    background: #00b4b4;
+    border-radius: 0;
+    padding: 13px; }
+  #topNavbar .btn-transparent:focus {
+    box-shadow: none; }
+  #topNavbar .btn-transparent ~ .dropdown-menu {
+    background-color: #009b9b;
+    margin-top: -1px; }
+    #topNavbar .btn-transparent ~ .dropdown-menu:hover {
+      background: #009b9b; }
+    #topNavbar .btn-transparent ~ .dropdown-menu a:hover {
+      background-color: #003C46 !important;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+#topNavbar .navbar-text {
+  color: #fff;
+  align-self: center; }
+#topNavbar .cadastre-se {
+  color: #00b4b4;
+  align-self: center; }
+  #topNavbar .cadastre-se:hover {
+    color: #fff; }
 
 .page-header > div.t-bg-collection {
   background-color: #003C46; }

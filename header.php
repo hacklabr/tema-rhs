@@ -17,32 +17,36 @@
             <?php echo tainacan_get_logo(); ?>
             <div class="btn-group ml-auto"> 
                 <div class="btn-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Faça seu login
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
+                        <a class="dropdown-item">Action</a>
+                        <a class="dropdown-item">Another action</a>
+                        <a class="dropdown-item">Something else here</a>
                     </div>
                 </div>
-                    <form class="form-horizontal my-2 my-md-0 tainacan-search-form d-none" [formGroup]="searchForm" role="form" (keyup.enter)="onSubmit()">
-                        <div class="input-group">
-                            <input type="text" name="s" placeholder="<?php _e('Search', 'tainacan-theme'); ?>" class="form-control" formControlName="searchText" size="50">
-                            <span class="text-midnight-blue input-group-btn mdi mdi-magnify form-control-feedback"></span>
-                        </div>
-                    </form>
-                    <div class="dropdown tainacan-form-dropdown d-md-none">
-                        <a class="btn btn-link text-midnight-blue px-1 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mdi mdi-magnify"></i></a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-                                <div class="input-group border">
-                                    <input class="form-control py-2 border-0" type="search" name="s" placeholder="<?php _e('Search', 'tainacan-theme'); ?>" id="tainacan-search">
-                                </div>
-                            </form>
-                        </div>
+                <span class="navbar-text">ou</span>
+                <li class="nav-item d-flex">
+                    <a class="nav-link cadastre-se" href="#">Cadastre-se</a>
+                </li>
+                <form class="form-horizontal my-2 my-md-0 tainacan-search-form d-none" [formGroup]="searchForm" role="form" (keyup.enter)="onSubmit()">
+                    <div class="input-group">
+                        <input type="text" name="s" placeholder="<?php _e('Search', 'tainacan-theme'); ?>" class="form-control" formControlName="searchText" size="50">
+                        <span class="text-midnight-blue input-group-btn mdi mdi-magnify form-control-feedback"></span>
                     </div>
+                </form>
+                <div class="dropdown tainacan-form-dropdown d-md-none">
+                    <a class="btn btn-link text-midnight-blue px-1 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mdi mdi-magnify"></i></a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+                            <div class="input-group border">
+                                <input class="form-control py-2 border-0" type="search" name="s" placeholder="<?php _e('Search', 'tainacan-theme'); ?>" id="tainacan-search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
