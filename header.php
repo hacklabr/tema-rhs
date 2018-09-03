@@ -24,7 +24,7 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <li class="login-box-container" style="width: 550px;">
                                 <div class="col login-box-wrapper">
-                                    <h3 class="text-center text-white font-weight-bold"> Acesse sua Conta </h3>
+                                    <h3 class="dropdown-header text-center text-white font-weight-bold"> Acesse sua Conta </h3>
                                     <form id="login" action="wp-login.php" method="post" role="form" autocomplete="off" class="col" novalidate="novalidate">
                                         <div class="form-group text-white">
                                             <label for="username"> E-mail </label>
@@ -67,6 +67,19 @@
                     <li class="nav-item d-flex">
                         <a class="nav-link cadastre-se" href="#">Cadastre-se</a>
                     </li> -->
+                <?php else: ?>
+                    <?php $user_info = get_userdata(get_current_user_id()); ?>
+                    <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?php 
+                            echo wp_get_current_user()->display_name; 
+                            echo get_avatar(get_current_user_id(), 30, '', '', array('class' => 'rounded-circle ml-2'));
+                        ?>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Painel</a>
+                        </li>
+                    </div>
                 <?php endif; ?>
                 <form class="form-horizontal my-2 my-md-0 tainacan-search-form d-none" [formGroup]="searchForm" role="form" (keyup.enter)="onSubmit()">
                     <div class="input-group">
