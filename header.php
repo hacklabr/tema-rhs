@@ -16,20 +16,58 @@
         <div class="container mx-auto px-0" id="topNavbar">
             <?php echo tainacan_get_logo(); ?>
             <div class="btn-group ml-auto"> 
-                <div class="btn-group">
-                    <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Faça seu login
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item">Action</a>
-                        <a class="dropdown-item">Another action</a>
-                        <a class="dropdown-item">Something else here</a>
+                <?php if(!is_user_logged_in()) :?>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Faça seu login
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <li class="login-box-container" style="width: 550px;">
+                                <div class="col login-box-wrapper">
+                                    <h3 class="text-center text-white font-weight-bold"> Acesse sua Conta </h3>
+                                    <form id="login" action="wp-login.php" method="post" role="form" autocomplete="off" class="col" novalidate="novalidate">
+                                        <div class="form-group text-white">
+                                            <label for="username"> E-mail </label>
+                                            <input type="email" placeholder="Digite seu e-mail cadastrado" name="log" id="log" tabindex="1" class="form-control" value="" autocomplete="off">
+                                        </div>
+                                
+                                        <div class="form-group text-white">
+                                            <label for="password"> Senha </label>
+                                            <input type="password" name="pwd" id="pwd" tabindex="2" class="form-control" placeholder="Digite sua senha" autocomplete="off">
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-7 text-white">
+                                                    <input id="rememberme" name="rememberme" type="checkbox" value="forever" tabindex="3">
+                                                    <label for="rememberme"> Permanecer Logado </label>
+                                                </div>
+                                                <div class="col-5 float-right">
+                                                    <input type="hidden" name="currentURL" value="/">
+                                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-rhs" value="Entrar">
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="text-center">
+                                                        <a href="http://redehumanizasus.net/wp-login.php?action=lostpassword" tabindex="5" class="forgot-password text-white">Esqueceu sua senha?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </div>
                     </div>
-                </div>
-                <span class="navbar-text">ou</span>
-                <li class="nav-item d-flex">
-                    <a class="nav-link cadastre-se" href="#">Cadastre-se</a>
-                </li>
+                    <!-- <span class="navbar-text">ou</span>
+                    <li class="nav-item d-flex">
+                        <a class="nav-link cadastre-se" href="#">Cadastre-se</a>
+                    </li> -->
+                <?php endif; ?>
                 <form class="form-horizontal my-2 my-md-0 tainacan-search-form d-none" [formGroup]="searchForm" role="form" (keyup.enter)="onSubmit()">
                     <div class="input-group">
                         <input type="text" name="s" placeholder="<?php _e('Search', 'tainacan-theme'); ?>" class="form-control" formControlName="searchText" size="50">
