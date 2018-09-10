@@ -189,6 +189,34 @@ Segundo Nav-menu
   background-color: #003C46; }
 
 footer.tainacan-footer {
-  background-color: #00343d; }
+  background-color: #003C46; }
+  footer.tainacan-footer .tainacan-footer--title {
+    background-color: #00343d;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center; }
+    footer.tainacan-footer .tainacan-footer--title p {
+      margin: 10px 0 10px; }
+  footer.tainacan-footer .tainacan-footer--menu {
+    background-color: #003C46;
+    color: #00B4B4;
+    margin-bottom: -20px;
+    font-size: 0.75em; }
+    footer.tainacan-footer .tainacan-footer--menu a {
+      background-color: #003C46;
+      color: #00B4B4;
+      float: left;
+      padding: 18px;
+      margin-left: 37px;
+      text-transform: uppercase;
+      font-weight: 900; }
+  footer.tainacan-footer .tainacan-footer--corporation {
+    background-color: #003C46;
+    text-align: center;
+    padding: 9px; }
+    footer.tainacan-footer .tainacan-footer--corporation a {
+      color: #00B4B4; }
 
 /*# sourceMappingURL=theme.css.map */

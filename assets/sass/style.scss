@@ -109,6 +109,40 @@ nav {
 }
 footer {
     &.tainacan-footer {
-        background-color: map-get($colors, cyprus_footer);
+        background-color: map-get($colors, cyprus);
+        .tainacan-footer--title{
+            background-color: map-get($colors, cyprus_footer);
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 6px;
+            text-align: center;
+            p{
+                margin: 10px 0 10px;
+            }
+        }
+        .tainacan-footer--menu{
+            background-color: map-get($colors, cyprus);
+            color: map-get($colors, pacific);
+            margin-bottom: -20px;
+            font-size: 0.75em;
+            a {
+                background-color: map-get($colors, cyprus);
+                color: map-get($colors, pacific);
+                float: left;
+                padding: 18px;
+                margin-left: 37px;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+        }
+        .tainacan-footer--corporation{
+            background-color: map-get($colors, cyprus);
+            text-align: center;
+            padding: 9px;
+            a {
+                color: map-get($colors, pacific);
+            }
+        }
     }
 }

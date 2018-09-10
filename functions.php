@@ -20,14 +20,15 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', 99 );
 register_nav_menus( array(
 	'menuTopoDropDown' => __( 'Nav Menu Dropdown Below Header', 'tainacan-theme' ),
 	'menuDropDownMobile' => __( 'Nav Menu Dropdown Mobile Below Header', 'tainacan-theme' ),
+	'menuRodape' => __( 'Nav Menu Footer', 'tainacan-theme' ),
 ) );
 
 /**
 *
 * Menu dropdown que fica no segundo nav da página
 *
-* @param 'menu' => 'MenuDropdDown' Seleciona o menu com este nome no painel admin.
-* @param 'theme_location' => 'MenuDropdDown' pega o menu que está setado em MenuDropDown
+* @param 'menu' => 'menuTopoDropDown' Seleciona o menu com este nome no painel admin.
+* @param 'theme_location' => 'menuTopoDropDown' pega o menu que está setado em menuTopoDropDown
 *
 **/
 function menuTopoDropDown(){
@@ -46,8 +47,8 @@ function menuTopoDropDown(){
 *
 * Menu que fica no segundo nav da página.
 *
-* @param 'menu' => 'SegundoMenu' Seleciona o menu com este nome no painel admin.
-* @param 'theme_location' => 'SegundoMenu' pega o menu que está setado em SegundoMenu
+* @param 'menu' => 'navMenubelowHeader' Seleciona o menu com este nome no painel admin.
+* @param 'theme_location' => 'navMenubelowHeader' pega o menu que está setado em navMenubelowHeader
 **/
 function navMenubelowHeader(){
 	wp_nav_menu( array(
@@ -65,8 +66,8 @@ function navMenubelowHeader(){
 *
 * Menu dropdown que fica no segundo nav da página
 *
-* @param 'menu' => 'MenuDropdDown' Seleciona o menu com este nome no painel admin.
-* @param 'theme_location' => 'MenuDropdDown' pega o menu que está setado em MenuDropDown
+* @param 'menu' => 'menuDropDownMobile' Seleciona o menu com este nome no painel admin.
+* @param 'theme_location' => 'menuDropDownMobile' pega o menu que está setado em menuDropDownMobile
 *
 **/
 function menuDropDownMobile(){
@@ -78,6 +79,26 @@ function menuDropDownMobile(){
         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
         'walker'            => new WP_Bootstrap_Navwalker()) // Classe usada para compor o menu bootstrap com o WP
     );
+}
+
+/**
+*
+* Menu que fica no footer da página.
+*
+* @param 'menu' => 'menuRodape' Seleciona o menu com este nome no painel admin.
+* @param 'theme_location' => 'menuRodape' pega o menu que está setado em menuRodape
+*
+**/
+function menuRodape(){
+	wp_nav_menu( array(
+	    'menu'              => 'menuRodape',
+	    'theme_location'    => 'menuRodape',
+	    'depth'             => 0,
+        'container_class'   => 'col',
+	    'menu_class'        => 'nav navbar-nav d-block',
+	    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+	    'walker'            => new WP_Bootstrap_Navwalker()) // Classe usada para compor o menu bootstrap com o WP
+	);
 }
 
 /*
