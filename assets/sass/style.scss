@@ -100,6 +100,10 @@ nav {
 
 @import "menu";
 
+.min-height {
+    min-height: 450px;
+}
+
 .page-header {
     > div{
         &.t-bg-collection{

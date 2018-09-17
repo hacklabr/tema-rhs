@@ -63,21 +63,30 @@
                             </li>
                         </div>
                     </div>
-                    <!-- <span class="navbar-text">ou</span>
+                    <span class="navbar-text">ou</span>
                     <li class="nav-item d-flex">
-                        <a class="nav-link cadastre-se" href="#">Cadastre-se</a>
-                    </li> -->
+                        <a class="nav-link cadastre-se" href="http://redehumanizasus.net/registrar/">Cadastre-se</a>
+                    </li>
                 <?php else: ?>
-                    <?php $user_info = get_userdata(get_current_user_id()); ?>
+                    <?php 
+                        $current_user = wp_get_current_user();
+                    ?>
                     <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php 
-                            echo wp_get_current_user()->display_name; 
+                            echo $current_user->display_name; 
                             echo get_avatar(get_current_user_id(), 30, '', '', array('class' => 'rounded-circle ml-2'));
                         ?>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Painel</a>
+                        <li class="nav-item" style="font-size: 14px;">
+                            <a class="nav-link text-white" href="http://redehumanizasus.net/publicar-postagem"><i class="mdi mdi-pencil-box-outline"></i> Publicar Post</a>
+                            <?php
+                            if (user_can( $current_user, 'administrator' ) || user_can( $current_user, 'editor' )) : ?>
+                                <a class="nav-link text-white" href="<?php echo admin_url();?>"><i class="mdi mdi-speedometer"></i> Painel</a>
+                            <?php endif; ?>
+                            <a class="nav-link text-white" href="<?php echo get_author_posts_url(get_current_user_id()); ?>"><i class="mdi mdi-eye"></i> Meu Perfil</a>
+                            <a class="nav-link text-white" href="http://redehumanizasus.net/minhas-postagens"><i class="mdi mdi-view-list"></i> Minhas Postagens</a>
+                            <a class="nav-link text-white" href="<?php echo wp_logout_url(home_url()); ?>"><i class="mdi mdi-logout-variant"></i> Sair</a>
                         </li>
                     </div>
                 <?php endif; ?>

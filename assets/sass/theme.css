@@ -166,16 +166,25 @@ Segundo Nav-menu
     box-shadow: none; }
   #topNavbar .btn-transparent ~ .dropdown-menu {
     background-color: #009b9b;
-    margin-top: -1px; }
+    margin-top: -1px;
+    padding: 0; }
     #topNavbar .btn-transparent ~ .dropdown-menu:hover {
       background: #009b9b; }
-    #topNavbar .btn-transparent ~ .dropdown-menu a:hover {
-      background-color: #003C46 !important;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
+    #topNavbar .btn-transparent ~ .dropdown-menu a {
+      padding: 10px 10px;
+      text-align: left;
+      width: 100%; }
+      #topNavbar .btn-transparent ~ .dropdown-menu a:not(:last-child) {
+        border-bottom: 1px solid #00b4b4; }
+      #topNavbar .btn-transparent ~ .dropdown-menu a:hover {
+        background-color: #00b4b4 !important;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+      #topNavbar .btn-transparent ~ .dropdown-menu a i {
+        color: #006d6d; }
 #topNavbar .navbar-text {
   color: #fff;
   align-self: center; }
@@ -184,6 +193,9 @@ Segundo Nav-menu
   align-self: center; }
   #topNavbar .cadastre-se:hover {
     color: #fff; }
+
+.min-height {
+  min-height: 450px; }
 
 .page-header > div.t-bg-collection {
   background-color: #003C46; }

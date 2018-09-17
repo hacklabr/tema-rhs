@@ -163,17 +163,27 @@ Segundo Nav-menu
         & ~ .dropdown-menu {
             background-color: #009b9b;
             margin-top: -1px;
+            padding: 0;
             &:hover {
                 background: #009b9b;
             }
             a {
+                padding: 10px 10px; 
+                text-align: left; 
+                width: 100%;
+                &:not(:last-child){
+                    border-bottom: 1px solid #00b4b4;
+                }
                 &:hover {
-                    background-color: #003C46 !important;
+                    background-color: #00b4b4 !important;
                     -webkit-transition: all 0.5s ease;
                     -moz-transition: all 0.5s ease;
                     -ms-transition: all 0.5s ease;
                     -o-transition: all 0.5s ease;
                     transition: all 0.5s ease;
+                }
+                i {
+                    color: #006d6d;
                 }
             }
         }
